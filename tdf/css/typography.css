@@ -92,6 +92,14 @@
 		.typography li li {
 		}
 
+/* used by FolderPage */
+.typography li.folder {
+	background: url(../images/icons/folder_open.png) no-repeat left top;
+	margin-left: -12px;
+	padding-left: 22px;
+	list-style-type: none;
+}
+
 /* HEADER STYLES
 -------------------------------------------- */
 .typography h1,
