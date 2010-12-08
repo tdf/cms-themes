@@ -21,7 +21,7 @@
 	<div id="BgContainer">
 		<div id="Container">
 			<div id="Header">
-				$SearchForm
+				<% if DisableSiteSearch %><% else %>$SearchForm<% end_if %>
 		   		<h1>$SiteConfig.Title</h1>
 		    	<p>$SiteConfig.Tagline</p>
 			</div>
