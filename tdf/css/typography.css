@@ -244,7 +244,7 @@ ul.table {
 ul.table > li {
 	display: table-row;
 }
-ul.table > li > :first-child {
+ul.table > li > * {
 	display: table-cell;
 	padding-right: 1em;
 }
