@@ -237,3 +237,14 @@ ul.ul-libreoffice li {
 p.roles {
 	font-variant: small-caps;
 }
+
+ul.table {
+	display: table;
+}
+ul.table > li {
+	display: table-row;
+}
+ul.table > li > :first-child {
+	display: table-cell;
+	padding-right: 1em;
+}
