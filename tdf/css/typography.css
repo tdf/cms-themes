@@ -33,10 +33,15 @@
 
 .typography a {
 	text-decoration: none;
-	color: #3E91C4;
+	color: #0369A3;
 }
 .typography a:hover {
 	text-decoration: underline;
+	color: #0369A3;
+}
+.typography a:visited  {
+	text-decoration: underline;
+	color: #18A303;
 }
 /* LINK ICONS - shows type of file
 ------------------------------------ */
@@ -105,7 +110,7 @@
 .typography h1,
 .typography h2,
 .typography h3 {
-	color: #0e9cee;
+	color: #18A303;
 	margin: 0 0 18px 0;
 	font-weight: 400;
 }
@@ -238,6 +243,30 @@ p.roles {
 	font-variant: small-caps;
 }
 
+/* STRONG
+-------------------------------------------- */
+.typography strong {
+	color: #18A303;
+}
+.highlight {
+	background: yellow;
+}
+
+/* for translation status sitemap */
+div.missing {
+	background-color: red;
+}
+div.live {
+	background-color: green;
+}
+div.unpublished {
+	background-color: orange;
+}
+div.changed {
+	background-color: yellow;
+}
+
+/* for horizontally aligned li-children */
 ul.table {
 	display: table;
 }
