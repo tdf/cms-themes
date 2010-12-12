@@ -520,6 +520,7 @@ div.typography {
 	}
 	#Footer td:first-child {
 		padding-right: 1em;
+		font-style: italic;
 	}
 
 /* for cms-aware tranlsations of the pages */
