@@ -140,3 +140,8 @@ ul.optionset {
 		ul.optionset li label {
 			margin: 0;
 		}
+/* standalone checkbox */
+input[type="checkbox"] {
+	vertical-align: middle;
+	margin-top: -3px;
+}
