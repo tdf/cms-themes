@@ -517,7 +517,10 @@ div.typography {
 	#Footer table {
 		margin: 0 55px 0 55px;
 		width: 780px;
-}
+	}
+	#Footer td:first-child {
+		padding-right: 1em;
+	}
 
 /* for cms-aware tranlsations of the pages */
 div#translations {
