@@ -10,6 +10,6 @@
     However, that does not include the LibreOffice name, logo, or icon. Also, it does not include the source code of LibreOffice, which
     is licensed under the GNU Lesser General Public License (<a href="/lgpl">LGPLv3</a>).
   </td> 
-  <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" width="88px" height="31px"></a></td> 
+  <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" width="88" height="31"></a></td> 
 </tr> 
 </table> 
