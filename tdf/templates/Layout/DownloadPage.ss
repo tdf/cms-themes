@@ -1,3 +1,5 @@
+<% require javascript(sapphire/thirdparty/jquery/jquery-packed.js) %>
+<% require javascript(mysite/javascript/download.js) %>
 <% if Menu(2) %>
 	<% include SideBar %>
 <% end_if %>
@@ -30,11 +32,12 @@ title="$Title">
 <% cached "rsync", RsyncRefresh %>
 <!-- Last updated: $GetDownloads.Timestamp -->
 <div>
-<select id="platform"><% control GetDownloads.Platforms %><option value="$PlatformTemplate">$PlatformNice</option><% end_control %></select>
-<select id="lang"><% control GetDownloads.Languages %>
-<option value="$Language">($Language) <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %></option><% end_control %>
-</select>
-<label class="right"><input type="checkbox" id="BT" /> Download using BitTorrent</label></div>
+ <select id="platform"><% control GetDownloads.Platforms %><option value="$PlatformTemplate">$PlatformNice</option><% end_control %></select>
+ <select id="lang"><% control GetDownloads.Languages %>
+  <option value="$Language">($Language) <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %></option><% end_control %>
+ </select>
+ <label class="right"><input type="checkbox" id="BT" /> Download using BitTorrent</label>
+</div>
 <div id="filtered"><%-- output of the javascript goes here --%></div>
 <ul id="uldown">
  <% if GetDownloads.Sources %><li id="sourcedl"><a href="#" class="action">Download the source code to build your own installer</a>
@@ -57,7 +60,12 @@ title="$Title">
     <ul><% control Data %>
      <li><a href="#" class="action">$PlatformNice</a>
       <ul class="$Platformname"><% if Platformname == winx86 %><% control Links %>
-       <li><a href="http://download.documentfoundation.org/$File">$Filename</a> $Filesize</li><% end_control %>
+       <li class="install $Type"><a href="http://download.documentfoundation.org/$File">$Filename</a> $Filesize</li><% end_control %>
+       <li><a href="#" class="action">Helppacks</a>
+        <ul><% control Helppacks %>
+         <li class="help $Language"><a href="http://download.documentfoundation.org/$Helppack">$FilenameHelppack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
+        </ul><!-- helppacks -->
+       </li>
        <% else %><li class="lang en-US"><a href="http://download.documentfoundation.org/$Fullinstall">$FilenameFull</a> $Filesize (installer)</li>
        <li><a href="#" class="action">Languagepacks</a>
         <ul><% control Langpacks %>
