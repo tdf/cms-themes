@@ -6,7 +6,7 @@
 <% end_if %>
 <% if Translations %>
 <div id="translations">
- <p>Available tranlations of this page:</p>
+ <p>Available translations of this page:</p>
 <ul class="translations">
 <% control Translations %>
   <li class="$Locale.RFC1766">
