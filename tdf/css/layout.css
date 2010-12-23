@@ -696,3 +696,8 @@ div#right-download {
 	border-width: 0px;
 	margin-right: 40px;
 }
+
+div.faqsList {
+	margin-top: 1em;
+	margin-bottom: 1.2em;
+}
