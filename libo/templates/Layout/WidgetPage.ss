@@ -1,3 +1,4 @@
+<% require javascript(mysite/javascript/photoshuffler.js) %>
 <% if IsFullWidth %>
 <% else %>
  <% include SideBar %>
