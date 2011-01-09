@@ -101,7 +101,7 @@ ul, .typography ul {
 	background: url(../images/bullet-green.png) no-repeat 0 6px;
 	color: 333;
 	line-height: 170%;
-	padding: 0 0 0 18px;
+	padding: 0 0 8px 18px;
 }
 
 .typography ul ul {
@@ -171,8 +171,38 @@ ul, .typography ul {
 }
 
 .typography .ButtonBar li {
-	display: inline;
+	display: block;
+	float: left;
+	width: 17%;
+	height: 50px;
+	margin: 0 2.5% 1.25em 0;
+	padding: 0;
+	background-image: none;
 }
+
+.typography .ButtonBar li a {
+	padding: 0 0 0 24px;
+	background-repeat: no-repeat;
+	display: block;
+	font-size: .95em;
+}
+
+.typography .ButtonBar li a.irc {
+	background-image: url(../images/chat.png);
+}
+
+.typography .ButtonBar li a.facebook {
+	background-image: url(../images/facebook.png);
+}
+
+.typography .ButtonBar li a.template {
+	background-image: url(../images/template.png);
+}
+
+.typography .ButtonBar li a.extension {
+	background-image: url(../images/extension.png);
+}
+
 
 /* HEADER STYLES
 -------------------------------------------- */
@@ -184,7 +214,7 @@ ul, .typography ul {
 .typography h1 {
 	background: url(../images/heading-green.png) 0 bottom repeat-x;
 	border-bottom: 1px solid #92E285;
-	padding: 6px 0 2px 2px;
+	padding: .2em 0 .1em 2px;
 	color: #18A303;
 	font-weight: bold;
 	font-size: 1.4em;
