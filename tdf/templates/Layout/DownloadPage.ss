@@ -34,7 +34,7 @@ title="$Title">
 <div>
  <select id="platform"><% control GetDownloads.Platforms %><option value="$PlatformTemplate">$PlatformNice</option><% end_control %></select>
  <select id="lang"><% control GetDownloads.Languages %>
-  <option value="$Language">($Language) <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %></option><% end_control %>
+  <option value="$Language">$Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %></option><% end_control %>
  </select>
  <label class="right"><input type="checkbox" id="BT" /> Download using BitTorrent</label>
 </div>

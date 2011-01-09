@@ -4,7 +4,7 @@
 <table> 
 <tr> 
   <td> 
-    <a href="/privacy">Privacy Policy</a> | <a href="/imprint">Legal Info</a> | Copyright information: Unless otherwise specified, all
+    <a href="/privacy">Privacy Policy</a> | <a href="/imprint">Impressum (Legal Info)</a> | Copyright information: Unless otherwise specified, all
     text and images on <a href="http://www.documentfoundation.org/">documentfoundation.org</a> and libreoffice.org are licensed under
     the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 License</a>.
     However, that does not include the LibreOffice name, logo, or icon. Also, it does not include the source code of LibreOffice, which
