@@ -1,0 +1,354 @@
+/**
+ * LibreOffice theme
+ * initially based on SilverStripe Black Candy Theme
+ *
+ * This typography file is included in the WYSIWYG editor and the front end. It provides
+ * a place to add link styles and font styles you would like in the CMS and the Front End.
+ */
+
+/* PARAGRAPHS & BLOCKQUOTES
+-------------------------------------------- */
+p, blockquote, .HalfBlockLeft, .HalfBlockRight {
+	margin-bottom: 1.2em;
+}
+
+.typography ul {
+	margin-bottom: 1.5em;
+}
+
+.typography p, .typography blockquote {
+	text-align: justify;
+	line-height: 175%;
+	color: #333;
+}
+
+.typography blockquote {
+	border-left: 10px solid #92E285;
+	margin: 0 0 1.5em 25px;
+	padding: 0 0 0 18px;
+	color: #333;
+}
+
+.typography blockquote p {
+	margin: 0;
+	padding: 5px 0;
+	color: #333;
+}
+
+/* LINKS
+-------------------------------------------- */
+a, .typography a {
+	color: #18A303;
+	text-decoration: none;
+}
+
+a:hover, .typography a:hover {
+	color: #106802;
+	text-decoration: underline;
+} 
+a:visited, .typography a:visited  {
+	color: #106802;
+}
+/* LINK ICONS - shows type of file
+------------------------------------ */
+.typography a[href$=".pdf"],
+.typography a[href$=".PDF"],
+.typography a.pdf {
+	padding: 2px;
+	padding-left: 20px;
+	background: url(../images/icons/page_white_acrobat.png) no-repeat left center;
+}
+.typography a[href$=".doc"],
+.typography a[href$=".DOC"],
+.typography a.doc {
+	padding: 2px;
+	padding-left: 20px;
+	background: url(../images/icons/page_word.png) no-repeat left center;
+}
+.typography a[href$=".xls"],
+.typography a[href$=".XLS"],
+.typography a.xls {
+	padding: 2px;
+	padding-left: 20px;
+	background: url(../images/icons/page_excel.png) no-repeat left center;
+}
+.typography a[href$=".gz"],
+.typography a[href$=".GZ"],
+.typography a[href$=".gzip"],
+.typography a[href$=".GZIP"],
+.typography a[href$=".zip"],
+.typography a[href$=".ZIP"],
+.typography a.archive {
+	padding: 2px;
+	padding-left: 20px;
+	background: url(../images/icons/page_white_zip.png) no-repeat left center;
+}
+.typography a[href$=".exe"],
+.typography a[href$=".EXE"],
+.typography a.application {
+	padding: 2px;
+	padding-left: 20px;
+	background: url(../images/icons/application.png) no-repeat left center;
+}
+
+/* LIST STYLES
+-------------------------------------------- */
+ul, .typography ul {
+	list-style: none;
+}
+
+.typography ul li {
+	background: url(../images/bullet-green.png) no-repeat 0 6px;
+	color: 333;
+	line-height: 170%;
+	padding: 0 0 0 18px;
+}
+
+.typography ul ul {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.typography ul ul li {
+	background: url(../images/bullet-blue.png) no-repeat 0 6px;
+}
+
+.typography .Widget a {
+	color: #106802;
+}
+
+.typography #Blog li h2 a, .typography .Widget a.TweetAuthor, .typography .Widget small a {
+	color: #1C99E0;
+}
+
+.typography #Twitter li {
+	background: url(../images/tweet.png) no-repeat 0 12px;
+	padding: 6px 0 6px 40px;
+	font-size: .9em;
+	border-bottom: 1px solid #CCF4C6;
+}
+
+.typography #Blog li {
+	display: block;
+	background: url(../images/bullet-large-blue.png) no-repeat 0 10px;
+	padding: 6px 0 6px 30px;
+	border-bottom: 1px solid #CCF4C6;
+}
+
+.typography #Blog li h2 {
+	background: none;
+	border: none;
+	font-size: 1.1em;
+	margin: 0;
+	padding: 0;
+}
+
+.typography #Blog li p {
+	line-height: 150%;
+	font-size: .9em;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+.typography .Widget li small {
+	display: block;
+	font-size: .85em;
+}
+
+/* used by FolderPage */
+.typography li.folder {
+	background: url(../images/icons/folder_open.png) no-repeat left top;
+	margin-left: -12px;
+	padding-left: 22px;
+	list-style-type: none;
+}
+
+.typography .ButtonBar {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+.typography .ButtonBar li {
+	display: inline;
+}
+
+/* HEADER STYLES
+-------------------------------------------- */
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
+	margin-bottom: .5em;
+	font-weight: normal;
+}
+
+.typography h1 {
+	background: url(../images/heading-green.png) 0 bottom repeat-x;
+	border-bottom: 1px solid #92E285;
+	padding: 6px 0 2px 2px;
+	color: #18A303;
+	font-weight: bold;
+	font-size: 1.4em;
+	text-shadow: #FFF 0px 1px 1px;
+}
+
+.typography h2 {
+	border-bottom: 1px solid #CCF4C6;
+	color: #18A303;
+	font-size: 1.3em;
+}
+
+.typography h3 {
+	color: #18A303;
+	font-size: 1.2em;
+}
+
+.typography h4 {
+	color: #18A303;
+	font-size: 1.15em;
+}
+
+.typography h5 {
+	color: #18A303;
+	font-size: 1.1em;
+}
+
+.typography h6 {
+	color: #18A303;
+	font-size: 1.05em;
+}
+
+/* PRE STYLES
+-------------------------------------------- */
+.typography pre {
+	font-family:"Courier New",Courier;
+	display:block;
+	font-size:1.2em;
+	margin:2em 5em;
+	padding:0.5em;
+	border:1px #ccc solid;
+	background:#eee;;
+}
+
+/* TABLE STYLING
+-------------------------------------------- */
+.typography table {
+	margin: 0 0 18px 0;
+	border-collapse:collapse;
+}
+	.typography tr {}
+		.typography td {
+			padding:5px;
+		}
+
+/* WYSIWYG EDITOR ALIGNMENT CLASSES
+-------------------------------------------- */
+.typography .left {
+	text-align: left;
+}
+.typography .center {
+	text-align: center;
+}
+.typography .right {
+	text-align: right;
+}
+
+/* IMAGES
+-------------------------------------------- */
+.typography img {
+	border: none;
+}
+	.typography img.right {
+		float: right;
+		margin-left: 20px;
+	}
+	.typography img.left {
+		float: left;
+	}
+	.typography img.leftAlone {
+		float: left;
+		margin-right: 100%;
+	}
+	.typography img.center {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+ul.ul-libreoffice li {
+	position: relative;
+	list-style: none;
+	margin-left: 0px;
+	background: url(../images/li-bullet-single-dark.png) no-repeat;
+	background-position: 4px 3px;
+	padding-left: 30px;
+	display: block;
+	color: #000;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.typography kbd {
+	color: #000;
+	font-family: monospace;
+	background: #ddd;
+}
+#supporters td {
+	border-width: 0px;
+	vertical-align:top;
+	padding-bottom: 50px;
+}
+.foundationtable th {
+	font-size: 140%;
+	padding: 6px;
+	vertical-align: middle;
+	background: #eee;
+}
+.foundationtable tbody tr:first-child td  {
+	padding-top: 20px;
+}
+.foundationtable tbody tr td:first-child  {
+	padding-left: 0px;
+	padding-right: 15px;
+}
+p.roles {
+	font-variant: small-caps;
+}
+
+/* STRONG
+-------------------------------------------- */
+.typography strong {
+	color: #18A303;
+}
+.highlight {
+	background: yellow;
+}
+
+/* for translation status sitemap */
+div.missing {
+	background-color: red;
+}
+div.live {
+	background-color: green;
+}
+div.unpublished {
+	background-color: orange;
+}
+div.changed {
+	background-color: yellow;
+}
+
+/* for horizontally aligned li-children */
+ul.table {
+	display: table;
+}
+ul.table > li {
+	display: table-row;
+	background: none;
+}
+ul.table > li > * {
+	display: table-cell;
+	padding-right: 1em;
+}
+.clear{
+	clear:both;
+}

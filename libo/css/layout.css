@@ -1,0 +1,282 @@
+/* Core Styles */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 87.5% sans-serif;
+	background: url(../images/background-page.png) repeat-x #FFF;
+}
+
+/* Styles go from the top of the page to the bottom (generally) */
+
+#Container {
+	width: 900px;
+	margin: auto;
+}
+
+#Logo {
+	display: inline-block;
+	width: 218px;
+	height: 45px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: url(../images/logo.png) no-repeat 18px 20px;
+}
+
+#TopHeader, #BottomHeader {
+	padding-left: 5px;
+	padding-right: 5px;
+	background-image: url(../images/header.png);
+	background-repeat: no-repeat;
+}
+#Layout {
+	padding: 0 5px;
+}
+
+#HeaderTagLine {
+	float: right; 
+	padding-top: 30px;
+	padding-right: 20px;
+	color: #18A303;
+	font-size: 1.2em;
+}
+
+#BottomHeader {
+	background-position: 0 bottom;
+	margin-bottom: 1.25em;
+}
+
+#BottomHeader hr {
+	height: 1px;
+	clear: both;
+	display: block;
+	width: 100%;
+	border: none;
+}
+
+#FirstNavigation {
+	width: 100%;
+	display: block;
+	background: #18A303;
+	height: 33px;
+	border-bottom: 6px solid #43C330;
+	list-style: none;
+}
+
+.SingleMenu {
+	padding-bottom: 10px;
+}
+
+#FirstNavigation li a:hover, #SecondNavigation li a:hover, #ThirdNavigation li a:hover {
+	opacity: 1;
+	text-decoration: none;
+}
+
+#FirstNavigation li a, #SecondNavigation li a, #Logo {
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+#FirstNavigation > li {
+	position: relative;
+}
+
+#FirstNavigation li ul {
+	position: absolute;
+	background-color: #43C330;
+	z-index: 50;
+	display: none;
+}
+
+#FirstNavigation li:hover ul {
+	display: block;
+}
+
+#FirstNavigation li, #SecondNavigation li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#FirstNavigation li a {
+	display: block;
+	color: #FFF;
+	opacity: .75;
+	/*text-shadow: #106802 0px 1px 1px;*/
+	padding-top: 10px;
+	padding-bottom: 8px;
+	padding-right: 16px;
+}
+
+#FirstNavigation li.current a, #FirstNavigation li.section > a {
+	font-weight: bold;
+	background-color: #43C330;
+	opacity: 1;
+}
+
+#SecondNavigation {
+	width: 100%;
+	margin: 0;
+	height: 32px;
+	display: block;
+	clear: both;
+}
+
+#SecondNavigation li a {
+	display: block;
+	color: #FFF;
+	opacity: .75;
+	font-size: .95em;
+	padding-top: 2px;
+	padding-bottom: 17px;
+	/*text-shadow: #106802 0px 1px 1px;*/
+}
+
+#SecondNavigation li.current a, #SecondNavigation li.section a {
+	opacity: 1;
+	font-weight: bold;
+	background: url(../images/navigation-second-current.png) center bottom no-repeat;
+	/*text-shadow: #106802 0px 1px 1px;*/
+}
+
+#Layout #ThirdNavigation {
+	float: left;
+	width: 17.5%;
+	margin: 10px 0 0 0;
+}
+
+#Layout #ThirdNavigation > li {
+	margin-bottom: 0.25em;
+	display: block;
+	font-size: .95em;
+	padding: 0;
+	background-image: none;
+	position: relative;
+}
+
+#ThirdNavigation >li>ul {
+	position: absolute;
+	z-index: 50;
+	top: 0;
+	left: 100%;
+	background-color: white;
+	display: none;
+}
+#ThirdNavigation >li:hover >ul {
+	display: block;
+}
+
+#Layout #ThirdNavigation li a {
+	margin: 0;
+	display: block;
+	padding: 3px 10px 3px 0;
+	border-bottom: 1px solid #92E285;
+}
+
+#Layout #ThirdNavigation li a:hover {
+	background: url(../images/heading-green.png) repeat-x 0 bottom;
+}
+
+#Layout #ThirdNavigation li a.current {
+	color: #106802;
+	/*text-shadow: #18A303 0px 1px 1px;*/
+	font-weight: bold;
+	border-bottom: 1px solid #18A303;
+}
+
+#DownloadButton {
+	display: block;
+	padding: 20px 0 0 64px;
+	width: 360px;
+	height: 44px;
+	font-size: 1.5em;
+	color: #18A303;
+	background: url(../images/download-button.png) no-repeat;
+}
+
+#DownloadButton:hover {
+	background-position: 0 -64px;
+}
+
+#Footer {
+	clear: both;
+	border-top: 6px solid #43C330;
+	padding: 1.25em 0 2.2em 0;
+	font-size: 80%;
+}
+
+#FooterText {
+	display: inline-block;
+}
+
+#FooterText p {
+	line-height: 150%;
+	margin: 0;
+}
+
+#FooterText ul {
+	margin: 0 0 10px 0;
+	float: left;
+}
+
+#FooterText ul li {
+	display: inline-block;
+	margin: 0 0 0 18px;
+}
+
+#CreativeCommons {
+	float: right;
+	display: block;
+	margin: 3px 0 20px 18px;
+	width: 88px;
+	height: 30px;
+	background: url(../images/creative-commons-license.png) no-repeat;
+}
+
+div.HalfBlockLeft, div.HalfBlockRight {
+	width: 440px; 
+	float: left;
+	display: block;
+}
+
+div.HalfBlockRight {
+	float: right;
+}
+
+div.Clear {
+	display: block;
+	clear: both;
+}
+
+hr {
+	display: block;
+	clear: both;
+	height: .1em;
+	border: none;
+	width: 100%;
+}
+
+.FloatLeft {
+	float: left;
+}
+.FloatRight {
+	float: right;
+}
+
+.ThirdLevelPage {
+	width: 80%;
+	margin: 0 0 0 1%;
+}
+
+.Center {
+	text-align: center;
+}
+
+.RightMargin {
+	margin-right: 10px;
+}
