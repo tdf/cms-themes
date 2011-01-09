@@ -1,7 +1,8 @@
-<% if Menu(3) %>
-	<% include SideBar %>
+<% if IsFullWidth %>
+<% else %>
+ <% include SideBar %>
+ <div class="ThirdLevelPage FloatRight">
 <% end_if %>
-<div <% if Menu(3) %>class="ThirdLevelPage FloatRight"<% end_if %>>
 <% if Translations %>
 <div id="translations">
  <p>Available translations of this page:</p>
@@ -18,7 +19,7 @@ title="$Title">
 </ul>
 </div>
 <% end_if %>
-	
+
 <div class="typography">
 		<h1>$Title</h1>
 	
@@ -26,4 +27,4 @@ title="$Title">
 		$Form
 		$PageComments
 </div>
-
+<% if IsFullWidth %><% else %></div><% end_if %>

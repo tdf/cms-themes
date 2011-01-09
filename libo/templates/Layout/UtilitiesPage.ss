@@ -21,7 +21,7 @@ title="$Title">
 <% end_if %>
 	
 <div class="typography">
-		<h2>$Title</h2>
+		<h1>$Title</h1>
 	
 		$Content
 <div id="formresponse"></div>

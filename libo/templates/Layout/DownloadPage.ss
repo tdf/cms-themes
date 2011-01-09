@@ -2,10 +2,8 @@
 <% require javascript(mysite/javascript/download.js) %>
 <% if IsFullWidth %>
 <% else %>
-<% if Menu(3) %>
-	<% include SideBar %>
-<% end_if %>
-<div <% if Menu(3) %>class="ThirdLevelPage FloatRight"<% end_if %>>
+ <% include SideBar %>
+ <div class="ThirdLevelPage FloatRight">
 <% end_if %>
 <% if Translations %>
 <div id="translations">
