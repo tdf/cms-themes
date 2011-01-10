@@ -1,3 +1,4 @@
+<% cached %>
 	<h1>Twitter</h1>
 	<ul id="Twitter"><% control Tweets %>
 		<li>
@@ -5,3 +6,4 @@
 			<small><a href="$DateURL">$TimeAgo</a> &bull; <a href="$ReplyURL" title="Reply to this Tweet">Reply</a></small>
 		</li><% end_control %>
 	</ul>
+<% end_cached %>
