@@ -54,7 +54,7 @@ title="$Title">
    <li>$PlatformNice <a href="http://download.documentfoundation.org/$File">$Filename</a> $Filesize</li><% end_control %>
   </ul>
  </li><% end_if %>
- <% if GetDownloads.LibreOffice %><li id="libodl"><a href="#" class="action"><% t_('Downloadpage.DLSUITE','Other way to download LibreOffice, the productivity suite') %></a>
+ <% if GetDownloads.LibreOffice %><li id="libodl"><a href="#" class="action"><% _t('Downloadpage.DLSUITE','Other way to download LibreOffice, the productivity suite') %></a>
   <ul><% control GetDownloads.LibreOffice %>
    <li><a href="#" class="action">Version $Version</a>
     <ul><% control Data %>
