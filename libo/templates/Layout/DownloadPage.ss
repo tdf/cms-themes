@@ -36,11 +36,11 @@ title="$Title">
  <select id="lang"><% control GetDownloads.Languages %>
   <option value="$Language">$Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %></option><% end_control %>
  </select>
- <label class="right"><input type="checkbox" id="BT" /> Download using BitTorrent</label>
+ <label class="right"><input type="checkbox" id="BT" /> <% _t('Downloadpage.BITTORRENT','Download using BitTorrent') %></label>
 </div>
 <div id="filtered"><%-- output of the javascript goes here --%></div>
 <ul id="uldown">
- <% if GetDownloads.Sources %><li id="sourcedl"><a href="#" class="action">Download the source code to build your own installer</a>
+ <% if GetDownloads.Sources %><li id="sourcedl"><a href="#" class="action"><% _t('Downloadpage.DLSOURCE','Download the source code to build your own installer') %></a>
   <ul><% control GetDownloads.Sources %>
    <li><a href="#" class="action">$Version</a>
     <ul><% control Files %>
@@ -49,20 +49,25 @@ title="$Title">
    </li><% end_control %>
   </ul>
  </li><% end_if %>
- <% if GetDownloads.SDK %><li id="sdkdl"><a href="#" class="action">Download the SDK for developing extensions and external tools</a>
+ <% if GetDownloads.SDK %><li id="sdkdl"><a href="#" class="action"><% _t('Downloadpage.DLSDK','Download the SDK for developing extensions and external tools') %></a>
   <ul><% control GetDownloads.SDK %>
    <li>$PlatformNice <a href="http://download.documentfoundation.org/$File">$Filename</a> $Filesize</li><% end_control %>
   </ul>
  </li><% end_if %>
- <% if GetDownloads.LibreOffice %><li id="libodl"><a href="#" class="action">LibreOffice, the productivity suite</a>
+ <% if GetDownloads.LibreOffice %><li id="libodl"><a href="#" class="action"><% t_('Downloadpage.DLSUITE','Other way to download LibreOffice, the productivity suite') %></a>
   <ul><% control GetDownloads.LibreOffice %>
    <li><a href="#" class="action">Version $Version</a>
     <ul><% control Data %>
      <li><a href="#" class="action">$PlatformNice</a>
       <ul class="$Platformname"><% if Platformname == winx86 %><% control Links %>
-       <li><a href="http://download.documentfoundation.org/$File">$Filename</a> $Filesize</li><% end_control %>
+       <li class="install $Type"><a href="http://download.documentfoundation.org/$File">$Filename</a> $Filesize</li><% end_control %>
+       <li><a href="#" class="action">Helppacks</a>
+        <ul><% control Helppacks %>
+         <li class="help $Language"><a href="http://download.documentfoundation.org/$Helppack">$FilenameHelppack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
+        </ul><!-- helppacks -->
+       </li>
        <% else %><li class="lang en-US"><a href="http://download.documentfoundation.org/$Fullinstall">$FilenameFull</a> $Filesize (installer)</li>
-       <li><a href="#" class="action">Language packs</a>
+       <li><a href="#" class="action">Languagepacks</a>
         <ul><% control Langpacks %>
          <li class="lang $Language"><a href="http://download.documentfoundation.org/$Langpack">$FilenameLangpack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
         </ul><!-- langpacks -->
