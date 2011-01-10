@@ -382,3 +382,31 @@ ul.table > li > * {
 .clear{
 	clear:both;
 }
+
+hr {
+	display: block;
+	clear: both;
+	height: .1em;
+	border: none;
+	width: 100%;
+}
+
+.FloatLeft {
+	float: left;
+}
+
+.FloatRight {
+	float: right;
+}
+
+.RightMargin {
+	margin-right: 10px;
+}
+
+.captionImage.FloatRight {
+	margin-left: 1em;
+}
+
+.captionImage.FloatLeft {
+	margin-right: 1em;
+}
