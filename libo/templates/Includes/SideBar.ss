@@ -1,19 +1,27 @@
-<ul id="ThirdNavigation"><% control Menu(3) %>
-	<% if Children %>
-	<li class="$LinkingMode"><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levela"><span>$MenuTitle.XML<% if LinkingMode = current %> &raquo;<% end_if %></span></a>
-	<% else %>
-	<li><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levela"><span>$MenuTitle.XML</span></a>
-	<% end_if %>
-
-	<% if LinkOrSection = section %>
-		<% if Children %>
-		<ul class="sub">
-			<%-- <li><ul class="roundWhite"> --%><% control Children %>
-				<li><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levelb"><span>$MenuTitle.LimitCharacters(13,…)</span></a></li>
-					<% end_control %>
-			<%--	</ul></li> --%>
-		</ul>
-		<% end_if %>
-	<% end_if %>
-	</li><% end_control %> 
-</ul>
+<% if Level(3) %><% if Menu(3) %>
+  <ul id="ThirdNavigation"><% control Menu(3) %>
+   <li class="$LinkingMode"><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levela"><span>$MenuTitle.XML<% if LinkingMode == current %> »<
+    <ul class="sub"><% control Children %>
+     <li><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levelb"><span>$MenuTitle.XML</span></a></li>
+    <% end_control %></ul><% end_if %>
+   </li><% end_control %>
+  </ul><% end_if %><% else %>
+ <% if Level(2) %><% if Menu(2) %>
+   <ul id="ThirdNavigation"><% control Menu(2) %>
+    <li class="$LinkingMode"><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levela"><span>$MenuTitle.XML<% if LinkingMode == current %> »
+     <ul class="sub"><% control Children %>
+      <li><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levelb"><span>$MenuTitle.XML</span></a></li>
+     <% end_control %></ul><% end_if %>
+    </li><% end_control %>
+   </ul><% end_if %><% else %>
+  <% if Level(1) %><% if Menu(2) %>
+    <ul id="ThirdNavigation"><% control Menu(2) %>
+     <li class="$LinkingMode"><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levela"><span>$MenuTitle.XML<% if LinkingMode == current %> 
+      <ul class="sub"><% control Children %>
+       <li><a href="$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %> class="$LinkingMode levelb"><span>$MenuTitle.XML</span></a></li>
+      <% end_control %></ul><% end_if %>
+     </li><% end_control %>
+    </ul><% end_if %>
+  <% end_if %>
+ <% end_if %>
+<% end_if %>
