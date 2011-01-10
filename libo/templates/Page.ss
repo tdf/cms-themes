@@ -22,7 +22,7 @@
 		<div id="Container">
 
 			<div id="TopHeader">
-				<a id="Logo" href="#" title="Go to LibreOffice Home Page"></a>
+				<a id="Logo" href="<% control Page(/) %>$Link<% end_control %>" title="Go to LibreOffice Home Page"></a>
 			    	<p id="HeaderTagLine">$SiteConfig.Tagline</p>
 			</div>
 
