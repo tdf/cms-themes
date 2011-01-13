@@ -167,7 +167,7 @@ body {
 	display: none;
 }
 #ThirdNavigation >li:hover >ul {
-/*	display: block;*/
+	display: block;
 }
 
 #Layout #ThirdNavigation li a {
@@ -251,4 +251,8 @@ div.HalfBlockRight {
 .ThirdLevelPage {
 	width: 80%;
 	margin: 0 0 0 1%;
+}
+
+div#screenshot-slide {
+	background-repeat: no-repeat;
 }
