@@ -29,7 +29,7 @@ title="$Title">
 		$Form
 		$PageComments
 
-<% cached "rsync", RsyncRefresh %>
+<% cached "rsync", ContentLocale, RsyncRefresh %>
 <!-- Last updated: $GetDownloads.Timestamp -->
 <div>
  <select id="platform"><% control GetDownloads.Platforms %><option value="$PlatformTemplate">$PlatformNice</option><% end_control %></select>
