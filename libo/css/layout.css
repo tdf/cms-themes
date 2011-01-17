@@ -204,6 +204,7 @@ body {
 }
 
 #Footer {
+	margin: 0 5px;
 	clear: both;
 	border-top: 6px solid #43C330;
 	padding: 1.25em 0 2.2em 0;
@@ -255,4 +256,8 @@ div.HalfBlockRight {
 
 div#screenshot-slide {
 	background-repeat: no-repeat;
+}
+
+div#filtered {
+	margin-top: 0.8em;
 }

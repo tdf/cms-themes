@@ -16,6 +16,11 @@ p, blockquote, .HalfBlockLeft, .HalfBlockRight {
 	margin-bottom: 1.5em;
 }
 
+.typography ol {
+	margin-left: 3em;
+	line-height: 170%;
+}
+
 .typography p, .typography blockquote {
 	text-align: justify;
 	line-height: 175%;
