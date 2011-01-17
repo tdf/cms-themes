@@ -71,7 +71,12 @@ title="$Title">
         <ul><% control Langpacks %>
          <li class="lang $Language"><a href="http://download.documentfoundation.org/$Langpack">$FilenameLangpack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
         </ul><!-- langpacks -->
-       </li><% end_if %>
+       <% if Helppacks %></li>
+       <li><a href="#" class="action">Helppacks</a>
+        <ul><% control Helppacks %>
+         <li class="help $Language"><a href="http://download.documentfoundation.org/$Helppack">$FilenameHelppack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
+        </ul><!-- helppacks -->
+       <% end_if %></li><% end_if %>
       </ul><!-- $Platformname -->
      </li><% end_control %>
     </ul><!-- $Version -->
