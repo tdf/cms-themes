@@ -24,7 +24,9 @@ title="$Title">
 <div class="typography">
 	
 		$Content
+<% cached %>
 		<% include Widgets %>
+<% end_cached %>
 		$ContentBelow
 		$Form
 		$PageComments
