@@ -22,7 +22,7 @@
 		<div id="Container">
 
 			<div id="TopHeader">
-				<a id="Logo" href="<% control Page(/) %>$Link<% end_control %>" title="Go to LibreOffice Home Page"></a>
+				<a id="Logo" href="<% control Page(/) %>$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %><% end_control %>></a>
 			    	<p id="HeaderTagLine">$SiteConfig.Tagline</p>
 			</div>
 
