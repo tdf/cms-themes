@@ -66,7 +66,7 @@ title="$Title">
          <li class="help $Language"><a href="http://download.documentfoundation.org/$Helppack">$FilenameHelppack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
         </ul><!-- helppacks -->
        </li>
-       <% else %><li class="lang en-US"><a href="http://download.documentfoundation.org/$Fullinstall">$FilenameFull</a> $Filesize (installer)</li>
+       <% else %><li class="lang en-US"><a href="http://download.documentfoundation.org/$Fullinstall">$FilenameFull</a> $Filesize (<% _t('Downloadpage.INSTALLER','installer') %>)</li>
        <li><a href="#" class="action">Languagepacks</a>
         <ul><% control Langpacks %>
          <li class="lang $Language"><a href="http://download.documentfoundation.org/$Langpack">$FilenameLangpack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
