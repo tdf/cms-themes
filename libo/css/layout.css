@@ -24,8 +24,9 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background: url(../images/logo.png) no-repeat 18px 20px;
+	*float:left;/* hack for IE7 that doesn't respect inline-block */
 }
-
+#TopHeader { height: 88px;/* needed for IE7 */}
 #TopHeader, #BottomHeader {
 	padding-left: 5px;
 	padding-right: 5px;
@@ -47,14 +48,6 @@ body {
 #BottomHeader {
 	background-position: 0 bottom;
 	margin-bottom: 1.25em;
-}
-
-#BottomHeader hr {
-	height: 1px;
-	clear: both;
-	display: block;
-	width: 100%;
-	border: none;
 }
 
 #FirstNavigation {
@@ -122,7 +115,7 @@ body {
 #SecondNavigation {
 	width: 100%;
 	margin: 0;
-	height: 32px;
+	height: 35px;
 	display: block;
 	clear: both;
 }

@@ -29,7 +29,7 @@
 			<div id="BottomHeader"<% if Menu(2) %><% else %> class="SingleMenu"<% end_if %>>
 				<% include Navigation %>
 				<% include SecondNavigation %>
-				<hr />
+				<div class="clear"></div>
 			</div>
 		
 			<div id="Layout">
