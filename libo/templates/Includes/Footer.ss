@@ -1,3 +1,4 @@
+<a id="toTop" href="#" title="<% _t('Navigation.TOTOPTITLE','scroll to top of page') %>"><% _t('Navigation.TOTOP','⬆ to top') %></a>
 <div id="FooterText">
 	<a id="CreativeCommons" href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution Share-Alike License (CC BY-SA)"></a>
 	

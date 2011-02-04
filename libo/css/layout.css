@@ -21,8 +21,7 @@ body {
 	display: inline-block;
 	width: 218px;
 	height: 45px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 18px 20px;
 	background: url(../images/logo.png) no-repeat 18px 20px;
 	*float:left;/* hack for IE7 that doesn't respect inline-block */
 }
@@ -50,30 +49,72 @@ body {
 	margin-bottom: 1.25em;
 }
 
-#FirstNavigation {
+#FirstNavigation, #SecondNavigation {
 	width: 100%;
 	display: block;
-	background: #18A303;
-	height: 33px;
-	border-bottom: 6px solid #43C330;
 	list-style: none;
+	white-space: nowrap;
+	word-spacing: -1em;
+	letter-spacing: -4px;
+}
+
+#FirstNavigation {
+	background: #18A303;
+	border-bottom: 6px solid #43C330;
+}
+#SecondNavigation {
+	margin-top: -6px;
 }
 
 .SingleMenu {
 	padding-bottom: 10px;
 }
 
-#FirstNavigation li a:hover, #SecondNavigation li a:hover, #ThirdNavigation li a:hover {
+#FirstNavigation li, #SecondNavigation li {
+	display: inline-block;
+	zoom:1; *display:inline;/* for ie6/7 */
+	word-spacing: normal;
+	letter-spacing: normal;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#FirstNavigation li a, #SecondNavigation li a {
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+}
+#FirstNavigation li a {
+	padding: 9px 18px;
+	margin-bottom: -6px;
+	background: #18A303;
+	border-bottom: 6px solid #43C330;
+}
+#SecondNavigation li a {
+	padding: 8px 16px;
+	margin-bottom: 10px;
+	font-size: .95em;
+	background: #43C330;
+}
+#FirstNavigation li a span, #SecondNavigation li a span {
+	opacity: .75;
+}
+#FirstNavigation li a:hover span, #SecondNavigation li a:hover span, #ThirdNavigation li a:hover {
 	opacity: 1;
 	text-decoration: none;
 }
-
-#FirstNavigation li a, #SecondNavigation li a, #Logo {
-	padding-left: 18px;
-	padding-right: 18px;
+#FirstNavigation li.current a span, #FirstNavigation li.section > a span, #SecondNavigation li.current a span, #SecondNavigation li.section a span {
+	opacity: 1;
+	font-weight: bold;
+}
+#FirstNavigation li.current a, #FirstNavigation li.section > a {
+	background-color: #43C330;
+}
+#SecondNavigation li.current, #SecondNavigation li.section {
+	background: url(../images/navigation-second-current.png) center bottom no-repeat;
 }
 
-#FirstNavigation > li {
+/*#FirstNavigation > li {
 	position: relative;
 }
 
@@ -87,55 +128,7 @@ body {
 #FirstNavigation li:hover ul {
 	display: block;
 }
-
-#FirstNavigation li, #SecondNavigation li {
-	display: block;
-	float: left;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-#FirstNavigation li a {
-	display: block;
-	color: #FFF;
-	opacity: .75;
-	/*text-shadow: #106802 0px 1px 1px;*/
-	padding-top: 10px;
-	padding-bottom: 8px;
-	padding-right: 16px;
-}
-
-#FirstNavigation li.current a, #FirstNavigation li.section > a {
-	font-weight: bold;
-	background-color: #43C330;
-	opacity: 1;
-}
-
-#SecondNavigation {
-	width: 100%;
-	margin: 0;
-	height: 35px;
-	display: block;
-	clear: both;
-}
-
-#SecondNavigation li a {
-	display: block;
-	color: #FFF;
-	opacity: .75;
-	font-size: .95em;
-	padding-top: 2px;
-	padding-bottom: 17px;
-	/*text-shadow: #106802 0px 1px 1px;*/
-}
-
-#SecondNavigation li.current a, #SecondNavigation li.section a {
-	opacity: 1;
-	font-weight: bold;
-	background: url(../images/navigation-second-current.png) center bottom no-repeat;
-	/*text-shadow: #106802 0px 1px 1px;*/
-}
+*/
 
 #Layout #ThirdNavigation {
 	float: left;
@@ -248,7 +241,7 @@ div.HalfBlockRight {
 	margin: 0 0 0 1%;
 }
 
-div#screenshot-slide {
+div#screenshot-slide, a#toTop {
 	background-repeat: no-repeat;
 }
 
@@ -259,4 +252,15 @@ div#filtered {
 div.faqsList {
 	margin-top: 1em;
 	margin-bottom: 1.2em;
+}
+
+a#toTop {
+	background-image: url(../images/tango_totop.png);
+	text-indent: 48px;
+	white-space: nowrap;
+	width: 48px;
+	height: 48px;
+	position: fixed;
+	top: 5px;
+	right: 0px;
 }

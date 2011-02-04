@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-
+<% require javascript(sapphire/thirdparty/jquery/jquery-packed.js) %>
+<% require javascript(mysite/javascript/misc.js) %>
 <html lang="$ContentLocale">
 	<head>
 		<% base_tag %>
