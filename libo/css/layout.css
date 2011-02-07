@@ -103,9 +103,12 @@ body {
 	opacity: 1;
 	text-decoration: none;
 }
-#FirstNavigation li.current a span, #FirstNavigation li.section > a span, #SecondNavigation li.current a span, #SecondNavigation li.section a span {
+#FirstNavigation li.current a span, #SecondNavigation li.current a span, #SecondNavigation li.section a span {
 	opacity: 1;
 	font-weight: bold;
+}
+#FirstNavigation li.section > a span {
+	opacity: 1;
 }
 #FirstNavigation li.current a, #FirstNavigation li.section > a {
 	background-color: #43C330;
