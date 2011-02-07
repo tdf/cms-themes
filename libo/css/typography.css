@@ -415,3 +415,132 @@ hr {
 .captionImage.FloatLeft {
 	margin-right: 1em;
 }
+/* pending - not final */
+.typography p.greenbox {
+	border: 1px solid #43C330;
+	background-color: #CCF4C6;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.typography p.bluebox {
+	border: 1px solid #1C99E0;
+	background-color: #AADCF7;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.typography p.orangebox {
+	border: 1px solid #D36118;
+	background-color: #F9CFB5;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.typography p.purplebox {
+	border: 1px solid #C254D2;
+	background-color: #F2CBF8;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.typography p.yellowbox {
+	border: 1px solid #E9B913;
+	background-color: #FDE9A9;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.typography p.intro {
+	font-size: 1.1em;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: .75em;
+}
+
+.typography p.excerpt {
+	width: 200px;
+	margin-bottom: 0;
+	padding: 0 0 0 40px;
+	display: block;
+	float: right;
+	color: #777;
+	font-style: italic;
+	text-align: left;
+}
+
+.typography p.tick {
+	padding-left: 50px;
+	background-image: url(../images/tick.png);
+	background-position: 10px 5px;
+	background-repeat: no-repeat;
+}
+
+.typography p.information {
+	padding-left: 50px;
+	background-image: url(../images/information.png);
+	background-position: 10px 5px;
+	background-repeat: no-repeat;
+}
+
+.typography p.warning {
+	padding-left: 50px;
+	background-image: url(../images/warning.png);
+	background-position: 10px 5px;
+	background-repeat: no-repeat;
+}
+
+.typography p.error {
+	padding-left: 50px;
+	background-image: url(../images/error.png);
+	background-position: 10px 5px;
+	background-repeat: no-repeat;
+}
+
+.typography p.excerpt:before {
+	content: '\201C';
+	color: #18A303;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-left: -25px;
+	margin-right: 8px;
+	position: relative;
+	top: .5em;
+	font-style: normal;
+}
+.typography p.excerpt:after {
+	content: '\201D ';
+	color: #18A303;
+	font-size: 4em;
+	line-height: 1px;
+	margin-left: 8px;
+	margin-bottom: 0;
+	position: relative;
+	top: .45em;
+	font-style: normal;
+}
+
+.typography div.box {
+	width: 150px;
+	margin: 10px;
+	display: block;
+	float: left;
+	box-shadow: 0 1px 2px #777;
+	-webkit-box-shadow: 0 1px 2px #777;
+	-moz-box-shadow: 0 1px 2px #777;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	text-align: center;
+}
+
+.typography div.box img {
+	height: 80px;
+	padding: 10px 10px 10px 10px;
+}
+
+.typography div.box p {
+	margin: 0;
+	padding: 10px;
+	background: #EEE;
+	text-align: left;
+}
