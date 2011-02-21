@@ -27,13 +27,13 @@
 			    	<p id="HeaderTagLine">$SiteConfig.Tagline</p>
 			</div>
 
-			<div id="BottomHeader"<% if Menu(2) %><% else %> class="SingleMenu"<% end_if %>>
+			<div id="BottomHeader"<% if isRTL %> dir="rtl"<% end_if %><% if Menu(2) %><% else %> class="SingleMenu"<% end_if %>>
 				<% include Navigation %>
 				<% include SecondNavigation %>
 				<div class="clear"></div>
 			</div>
 		
-			<div id="Layout">
+			<div id="Layout"<% if isRTL %> dir="rtl"<% end_if %>>
 				$Layout
 				<hr />
 			</div>
