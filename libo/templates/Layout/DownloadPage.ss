@@ -12,61 +12,59 @@
 		$Content
 		$Form
 		$PageComments
-
-<% cached "rsync", ContentLocale, RsyncRefresh %>
-<!-- Last updated: $GetDownloads.Timestamp -->
+<% cached ClassName,Aggregate(Download).Max(LastEdited) %>
+<% if LiboDB %>
 <div>
- <select id="platform"><% control GetDownloads.Platforms %><option value="$PlatformTemplate">$PlatformNice</option><% end_control %></select>
- <select id="lang"><% control GetDownloads.Languages %>
-  <option value="$Language">$Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %></option><% end_control %>
- </select>
+ <select id="platform"><% control LiboDB.GroupedBy(Platform) %><% control Children.GroupedBy(Arch) %><option value="{$Platform}$Arch">$NicePlatform</option><% end_control %><% end_control %></select>
+ $LangDropdown
  <label class="right"><input type="checkbox" id="BT" /> <% _t('Downloadpage.BITTORRENT','Download using BitTorrent') %></label>
 </div>
+<% else %><%-- no builds available is only assumed for testing-page --%>
+<p class="yellowbox">There are no testing builds available at the moment</p>
+<% end_if %>
 <div id="filtered"><%-- output of the javascript goes here --%></div>
 <ul id="uldown">
- <% if GetDownloads.Sources %><li id="sourcedl"><a href="#" class="action"><% _t('Downloadpage.DLSOURCE','Download the source code to build your own installer') %></a>
-  <ul><% control GetDownloads.Sources %>
+ <% if SourcesDB %><li id="sourcedl"><a href="#" class="action"><% _t('Downloadpage.DLSOURCE','Download the source code to build your own installer') %></a>
+  <ul><% control SourcesDB.GroupedBy(Version) %>
    <li><a href="#" class="action">$Version</a>
-    <ul><% control Files %>
-     <li><a href="http://download.documentfoundation.org/libreoffice/src/$Filename">$Filename</a> $Filesize</li><% end_control %>
+    <ul><% control Children %>
+     <li><a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice</li><% end_control %>
     </ul>
-   </li><% end_control %>
+   </li><!-- Version --><% end_control %>
   </ul>
- </li><% end_if %>
- <% if GetDownloads.SDK %><li id="sdkdl"><a href="#" class="action"><% _t('Downloadpage.DLSDK','Download the SDK for developing extensions and external tools') %></a>
-  <ul><% control GetDownloads.SDK %>
-   <li>$PlatformNice <a href="http://download.documentfoundation.org/$File">$Filename</a> $Filesize</li><% end_control %>
+ </li><!-- Sources --><% end_if %>
+ <% if SdkDB %><li id="sdkdl"><a href="#" class="action"><% _t('Downloadpage.DLSDK','Download the SDK for developing extensions and external tools') %></a>
+  <ul><% control SdkDB.GroupedBy(Version) %>
+   <li><a href="#" class="action">$Version</a>
+    <ul><% control Children %>
+     <li>$NicePlatform <a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice</li><% end_control %>
+    </ul>
+   </li><!-- Version --><% end_control %>
   </ul>
- </li><% end_if %>
- <% if GetDownloads.LibreOffice %><li id="libodl"><a href="#" class="action"><% _t('Downloadpage.DLSUITE','Other way to download LibreOffice, the productivity suite') %></a>
-  <ul><% control GetDownloads.LibreOffice %>
-   <li><a href="#" class="action">Version $Version</a>
-    <ul><% control Data %>
-     <li><a href="#" class="action">$PlatformNice</a>
-      <ul class="$Platformname"><% if Platformname == winx86 %><% control Links %>
-       <li class="install $Type"><a href="http://download.documentfoundation.org/$File">$Filename</a> $Filesize</li><% end_control %>
-       <li><a href="#" class="action">Helppacks</a>
-        <ul><% control Helppacks %>
-         <li class="help $Language"><a href="http://download.documentfoundation.org/$Helppack">$FilenameHelppack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
-        </ul><!-- helppacks -->
-       </li>
-       <% else %><li class="lang en-US"><a href="http://download.documentfoundation.org/$Fullinstall">$FilenameFull</a> $Filesize (<% _t('Downloadpage.INSTALLER','installer') %>)</li>
+ </li><!-- Sdk --><% end_if %>
+ <% if LiboDB %><li id="libodl"><a href="#" class="action"><% _t('Downloadpage.DLSUITE','Other way to download LibreOffice, the productivity suite') %></a>
+  <ul><% control LiboDB.GroupedBy(Version) %>
+   <li><a href="#" class="action">$Version</a>
+    <ul><% control Children.GroupedBy(Platform) %><% control Children.GroupedBy(Arch) %>
+     <li><a href="#" class="action">$NicePlatform</a>
+      <ul class="{$Platform}$Arch"><% control Children %>
+       <li class="install $Lang"><a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice</li><% if Last %><% if Langpacks %>
        <li><a href="#" class="action">Languagepacks</a>
         <ul><% control Langpacks %>
-         <li class="lang $Language"><a href="http://download.documentfoundation.org/$Langpack">$FilenameLangpack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
-        </ul><!-- langpacks -->
-       <% if Helppacks %></li>
+         <li class="lang $Lang"><a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice ($Lang - <% if NiceLang %>$NiceLang<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
+        </ul>
+       </li><!-- Langpacks --><% end_if %><% if Helppacks %>
        <li><a href="#" class="action">Helppacks</a>
         <ul><% control Helppacks %>
-         <li class="help $Language"><a href="http://download.documentfoundation.org/$Helppack">$FilenameHelppack</a> $Filesize ($Language - <% if LanguageNiceLocal %>$LanguageNiceLocal<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
-        </ul><!-- helppacks -->
-       <% end_if %></li><% end_if %>
-      </ul><!-- $Platformname -->
-     </li><% end_control %>
-    </ul><!-- $Version -->
-   </li><% end_control %>
-  </ul><!-- LibreOffice -->
- </li><% end_if %>
+         <li class="help $Lang"><a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice ($Lang - <% if NiceLang %>$NiceLang<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
+        </ul>
+       </li><!-- Helppacks --><% end_if %><% end_if %><% end_control %>
+      </ul>
+     </li><!-- platform/arch --><% end_control %><% end_control %>
+    </ul>
+   </li><!-- Version --><% end_control %>
+  </ul>
+ </li><!-- LibreOffice --><% end_if %>
 </ul>
 <% end_cached %>
 </div>
