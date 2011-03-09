@@ -5,7 +5,7 @@
 	<head>
 		<% base_tag %>
 		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
-		$MetaTags(false)
+		$MetaTags(false) $Subsite.GoogleSiteVerification
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
 		<% require themedCSS(layout) %> 
