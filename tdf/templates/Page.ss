@@ -4,18 +4,12 @@
 	<head>
 		<% base_tag %>
 		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
-		$MetaTags(false)
+		$MetaTags(false) $Subsite.GoogleSiteVerification
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
 		<% require themedCSS(layout) %> 
 		<% require themedCSS(typography) %> 
 		<% require themedCSS(form) %> 
-		
-		<!--[if IE 6]>
-			<style type="text/css">
-			 @import url(themes/tdf/css/ie6.css);
-			</style> 
-		<![endif]-->
 	</head>
 <body>
 	<div id="BgContainer">
