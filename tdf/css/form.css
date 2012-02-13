@@ -32,9 +32,9 @@ form ul {
 .middleColumn {
  	display: block;
  	margin: 15px 10px 10px 0;
-	background: #E9E9E9;
+/*	background: #E9E9E9;*/
 	padding: 4px;
-	width: 306px;
+/*	width: 306px;*/
 	clear: left;
 }
 	#Sidebar .middleColumn {
@@ -67,7 +67,7 @@ input.text, textarea, select {
 	color: #000;
 	font-size: 12px;
 	font-weight: bold;
-	width: 300px;
+	width: 660px;
 }
 
 textarea {

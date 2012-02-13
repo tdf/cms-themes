@@ -66,27 +66,24 @@ a:visited   { color: #18A303; text-decoration: underline; }
 /* HEADER
 ----------------------------------------- */
 #Header {
-	width: 890px;
-	margin: 0 auto;
-	padding: 5px 0 0 0;
-	background: #f2f2f2 url(../images/logo.png) no-repeat left center;
+	width: 850px;
+	background-color: #f2f2f2;
+	padding: 10px 20px 0 20px;
+	line-height: 48px;
 }
 	#Header h1 {
-		display:none;
+		background: url(../images/TDF_Logo_48px.png) no-repeat left center;
 	  	color: #000000;
-		text-align: right;
 		font-size: 3em;
 		font-family: Tahoma, Verdana, sans-serif;
-		font-weight: 300;
-		margin: 10px 10px 0 0;
+		padding-left: 50px;
+		font-weight: lighter;
 	}
 	#Header p {
+		margin-top: -48px;
 		font-size: 1.4em;
 		color: #18A303;
-		clear: left;
 		text-align: right;
-		padding: 0px 0 30px 0;
-		margin: 10px 10px 0 0;
 	}
 
 /* MAIN NAVIGATION - TABS
@@ -548,7 +545,10 @@ ul.translations li {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0;
-	margin: 0 -50px 0 0;
+}
+#welcome {
+	width: 420px;
+	margin-right: 330px;
 }
 ul#rnav + ul.ul-libreoffice {
 	/* if areas overlap, hover doesn't work correctly */
@@ -556,7 +556,7 @@ ul#rnav + ul.ul-libreoffice {
 }
 #rnav {
 	float: right;
-	margin: 0 -50px 0 0;
+	margin: 0;
 }
 	#rnav li, li.button {
 		list-style: none;
