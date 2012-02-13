@@ -34,7 +34,7 @@ form ul {
  	margin: 15px 10px 10px 0;
 	background: #E9E9E9;
 	padding: 4px;
-	width: 306px;
+	width: 500px; /*306px;*/
 	clear: left;
 }
 	#Sidebar .middleColumn {
@@ -67,7 +67,7 @@ input.text, textarea, select {
 	color: #000;
 	font-size: 12px;
 	font-weight: bold;
-	width: 300px;
+	width: 493px;  /* 300px;*/
 }
 
 textarea {
@@ -118,6 +118,10 @@ select {
 	color: #777;
 	font-size: 12px;
 }
+label[generated],form span.required {
+	margin-bottom: 4px;
+	color: red;
+}
 
 label.right {
 	display:inline;
@@ -131,6 +135,9 @@ ul.optionset {
 }
 	ul.optionset li {
 		margin: 6px 0;
+		background: initial;
+		line-height: initial;
+		padding: 0;
 		clear: both;
 	}
 		ul.optionset li input {
