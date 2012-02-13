@@ -1,0 +1,7 @@
+a#Bughuntbanner {
+	height: 78px;
+	width: 258px;
+	margin-top: 8px;
+	display: inline-block;
+}
+p#HeaderTagLine { max-width: 350px;}
