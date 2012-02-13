@@ -4,6 +4,7 @@
 <html lang="$ContentLocale">
 	<head>
 		<% base_tag %>
+<% cached "Top", ID, Aggregate(Page).Max(LastEdited) %>
 		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
 		$MetaTags(false) $Subsite.GoogleSiteVerification
 		<link rel="shortcut icon" href="/favicon.ico" />
@@ -11,20 +12,18 @@
 		<% require themedCSS(layout) %> 
 		<% require themedCSS(typography) %> 
 		<% require themedCSS(form) %> 
-		
-		<!--[if IE 6]>
-			<style type="text/css">
-			 @import url(themes/david/css/ie6.css);
-			</style> 
-		<![endif]-->
 	</head>
 <body>
 	<div id="BgContainer">
 		<div id="Container">
 
-			<div id="TopHeader">
+			<div id="TopHeader"<% if SubsiteID = 38 %> class="Conference"<% end_if %>>
 				<a id="Logo" href="<% control Page(/) %>$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %><% end_control %>></a>
-			    	<p id="HeaderTagLine">$SiteConfig.Tagline</p>
+				<%-- include Banner --%>
+			    	<p id="HeaderTagLine">$SiteConfig.Tagline.RAW</p>
+<% end_cached %>
+<%-- include SOPA_bar --%>
+<% cached "Navigation", ID, Aggregate(Page).Max(LastEdited) %>
 			</div>
 
 			<div id="BottomHeader"<% if isRTL %> dir="rtl"<% end_if %><% if Menu(2) %><% else %> class="SingleMenu"<% end_if %>>
@@ -34,7 +33,9 @@
 			</div>
 		
 			<div id="Layout"<% if isRTL %> dir="rtl"<% end_if %>>
+<% end_cached %>
 				$Layout
+<% cached "Bottom", ID, Aggregate(Page).Max(LastEdited) %>
 				<hr />
 			</div>
 
@@ -46,3 +47,4 @@
 	</div>
 </body>
 </html>
+<% end_cached %>
