@@ -12,12 +12,13 @@
 		$Content
 		$Form
 		$PageComments
-<% cached ClassName,Aggregate(Download).Max(LastEdited) %>
+<% cached ID,Aggregate(Download).Max(LastEdited) %>
 <% if LiboDB %>
 <div>
  <select id="platform"><% control LiboDB.GroupedBy(Platform) %><% control Children.GroupedBy(Arch) %><option value="{$Platform}$Arch">$NicePlatform</option><% end_control %><% end_control %></select>
  $LangDropdown
  <label class="right"><input type="checkbox" id="BT" /> <% _t('Downloadpage.BITTORRENT','Download using BitTorrent') %></label>
+ <label class="right"><input type="checkbox" id="Details" /> <% _t('Downloadpage.DETAILLINK','Get details (md5sum,…)') %></label>
 </div>
 <% else %><%-- no builds available is only assumed for testing-page --%>
 <p class="yellowbox">There are no testing builds available at the moment</p>
