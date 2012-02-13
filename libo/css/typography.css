@@ -108,6 +108,11 @@ ul, .typography ul {
 	line-height: 170%;
 	padding: 0 0 8px 18px;
 }
+#Layout[dir="rtl"] ul li {
+	padding-left: 0;
+	padding-right: 18px;
+	background-position: right 6px;
+}
 
 .typography ul ul {
 	margin-top: 10px;
@@ -127,16 +132,18 @@ ul, .typography ul {
 }
 
 .typography #Twitter li {
-	background: url(../images/tweet.png) no-repeat 0 12px;
-	padding: 6px 0 6px 40px;
+	background: url(../images/tweet.png) no-repeat 0 12px !important;
+	padding: 6px 0 6px 40px !important;
+	direction: ltr;
 	font-size: .9em;
 	border-bottom: 1px solid #CCF4C6;
 }
 
 .typography #Blog li {
 	display: block;
-	background: url(../images/bullet-large-blue.png) no-repeat 0 10px;
-	padding: 6px 0 6px 30px;
+	background: url(../images/bullet-large-blue.png) no-repeat 0 10px !important;
+	padding: 6px 0 6px 30px !important;
+	direction: ltr;
 	border-bottom: 1px solid #CCF4C6;
 }
 
@@ -181,30 +188,41 @@ ul, .typography ul {
 	width: 17%;
 	height: 50px;
 	margin: 0 2.5% 1.25em 0;
-	padding: 0;
+	padding: 0 !important; /* important because of rtl rules */
 	background-image: none;
 }
 
+.typography a.irc, a.facebook, a.gplus, a.gplusg, a.twitter, a.identica, a.template, a.extension { 
+	background-repeat: no-repeat;
+	padding-left: 20px; /* assuming 16x16px icon */
+}
 .typography .ButtonBar li a {
 	padding: 0 0 0 24px;
-	background-repeat: no-repeat;
 	display: block;
 	font-size: .95em;
 }
-
-.typography .ButtonBar li a.irc {
+.typography a.irc {
 	background-image: url(../images/chat.png);
 }
-
-.typography .ButtonBar li a.facebook {
+.typography a.facebook {
 	background-image: url(../images/facebook.png);
 }
-
-.typography .ButtonBar li a.template {
+.typography a.twitter {
+	background-image: url(../images/icons/twitter16.png);
+}
+.typography a.identica {
+	background-image: url(../images/icons/identica16.png);
+}
+.typography a.gplus {
+	background-image: url(../images/icons/gplus/plus/16.png);
+}
+.typography a.gplusg {
+	background-image: url(../images/icons/gplus/g/16.png);
+}
+.typography a.template {
 	background-image: url(../images/template.png);
 }
-
-.typography .ButtonBar li a.extension {
+.typography a.extension {
 	background-image: url(../images/extension.png);
 }
 
@@ -298,6 +316,7 @@ ul, .typography ul {
 	}
 	.typography img.left {
 		float: left;
+		margin-right: 20px;
 	}
 	.typography img.leftAlone {
 		float: left;
@@ -474,12 +493,20 @@ hr {
 	background-position: 10px 5px;
 	background-repeat: no-repeat;
 }
+.typography ul.tick {
+	background: url(../images/tick.png) no-repeat;
+	padding-left: 40px;
+}
 
 .typography p.information {
 	padding-left: 50px;
 	background-image: url(../images/information.png);
 	background-position: 10px 5px;
 	background-repeat: no-repeat;
+}
+.typography ul.information {
+	background: url(../images/information.png) no-repeat;
+	padding-left: 40px;
 }
 
 .typography p.warning {
@@ -488,12 +515,20 @@ hr {
 	background-position: 10px 5px;
 	background-repeat: no-repeat;
 }
+.typography ul.warning {
+	background: url(../images/warning.png) no-repeat;
+	padding-left: 40px;
+}
 
 .typography p.error {
 	padding-left: 50px;
 	background-image: url(../images/error.png);
 	background-position: 10px 5px;
 	background-repeat: no-repeat;
+}
+.typography ul.error {
+	background: url(../images/error.png) no-repeat;
+	padding-left: 40px;
 }
 
 .typography p.excerpt:before {
