@@ -21,8 +21,11 @@ body {
 	display: inline-block;
 	width: 218px;
 	height: 45px;
-	padding: 18px 20px;
-	background: url(../images/logo.png) no-repeat 18px 20px;
+	padding: 18px;
+	background: url(../images/logo.png) no-repeat 18px 18px;
+	/* height: 53px;
+	padding: 10px 18px 18px 18px;
+	background: url(../images/logo-seasonal-xmas.png) no-repeat 18px 10px; */
 	*float:left;/* hack for IE7 that doesn't respect inline-block */
 }
 #TopHeader { height: 88px;/* needed for IE7 */}
@@ -35,13 +38,20 @@ body {
 #Layout {
 	padding: 0 5px;
 }
-
 #HeaderTagLine {
 	float: right; 
 	padding-top: 30px;
 	padding-right: 20px;
 	color: #18A303;
 	font-size: 1.2em;
+}
+#TopHeader.Conference { height: 105px; }
+#TopHeader.Conference #HeaderTagLine { padding-top: 45px; }
+#TopHeader.Conference #Logo {
+	width: 517px;
+	height: 105px;
+	padding: 0;
+	background: url(../images/LibO_Conference_Logo_2011Paris_color.png) no-repeat -15px -11px;
 }
 
 #BottomHeader {
@@ -138,6 +148,9 @@ body {
 	width: 17.5%;
 	margin: .6em 0 0 0;
 }
+#Layout[dir="rtl"] #ThirdNavigation {
+	float: right;
+}
 
 #Layout #ThirdNavigation > li {
 	margin-bottom: 0.25em;
@@ -178,19 +191,27 @@ body {
 	border-bottom: 1px solid #18A303;
 }
 
+/* Restyle by Ivan M. 2011-09-14 */
+
 #DownloadButton {
 	display: block;
-	padding: 20px 0 0 64px;
-	width: 360px;
-	height: 44px;
+	font-weight: bold;
+	box-shadow: 0 3px 5px #AAA;
+	-moz-box-shadow: 0 3px 5px #AAA;
+	-webkit-box-shadow: 0 3px 5px #AAA;
+	padding: 25px 0 0 100px;
+	width: 340px;
+	height: 55px;
 	font-size: 1.5em;
-	color: #18A303;
-	background: url(../images/download-button.png) no-repeat;
+	color: #FFF;
+	text-shadow: 0 2px #18A303;
+	background: url(../images/download-button.png) no-repeat #18A303;
 }
 
 #DownloadButton:hover {
-	background-position: 0 -64px;
-	color: #106802;
+	background-position: 0 -80px;
+	color: #FFF;
+	text-decoration: none;
 }
 
 #Footer {
@@ -266,4 +287,13 @@ a#toTop {
 	position: fixed;
 	top: 5px;
 	right: 0px;
+}
+div#translations p, ul.translations, ul.translations li {
+	display: inline-block;
+}
+div#translations > ul.translations> li:first-letter {
+	text-transform: uppercase;
+}
+ul.translations li:not(:last-child):after {
+	content: ", ";
 }
