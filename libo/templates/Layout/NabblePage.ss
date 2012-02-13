@@ -17,7 +17,7 @@ href="http://nabble.documentfoundation.org/Users-f<% if NabbleForum %>$NabbleFor
 		link.style.display="none";
 		document.write("<div id='nabbleforum' style='width:100%'><div style='height:700px'><img src='http://n3.nabble.com/images/loading.png' width=94 height=33 alt='Loading...'></div></div>");
 		var e = document.createElement("script");
-		e.src = 'http://n3.nabble.com/embed/JsEmbed.jtp?id=' + window.nabble_id + '&node=<% if NabbleForum %>$NabbleForum<% else %>1639498<% end_if %>&url=' + encodeURIComponent(location.href);
+		e.src = 'http://n3.nabble.com/embed/JsEmbed.jtp?site=969070&node=<% if NabbleForum %>$NabbleForum<% else %>1639498<% end_if %>&url=' + encodeURIComponent(location.href);
 		e.type="text/javascript";
 		document.getElementsByTagName("head")[0].appendChild(e);
 	}
