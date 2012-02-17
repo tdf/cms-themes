@@ -104,7 +104,7 @@ ul, .typography ul {
 
 .typography ul li {
 	background: url(../images/bullet-green.png) no-repeat 0 6px;
-	color: 333;
+	color: #333;
 	line-height: 170%;
 	padding: 0 0 8px 18px;
 }
