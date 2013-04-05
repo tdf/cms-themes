@@ -4,7 +4,7 @@
 <html lang="$ContentLocale">
 	<head>
 		<% base_tag %>
-<% cached "Top", ID, Aggregate(Page).Max(LastEdited) %>
+<% cached "Top", ID, Banner %>
 		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
 		$MetaTags(false) $Subsite.GoogleSiteVerification
 		<link rel="shortcut icon" href="/favicon.ico" />
@@ -12,14 +12,16 @@
 		<% require themedCSS(layout) %> 
 		<% require themedCSS(typography) %> 
 		<% require themedCSS(form) %> 
+		<% uncached %><% if Banner %><% require themedCSS(banner) %><% end_if %><% end_cached %>
 	</head>
 <body>
 	<div id="BgContainer">
 		<div id="Container">
 
 			<div id="TopHeader"<% if SubsiteID = 38 %> class="Conference"<% end_if %>>
-				<a id="Logo" href="<% control Page(/) %>$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %><% end_control %>></a>
-				<%-- include Banner --%>
+				<%-- <a id="Logo" href="<% control Page(/) %>$Link" title=<% sprintf(_t('Navigation.GOTOPAGE','"Go to the %s page"'),$Title.XML) %><% end_control %>></a> --%>
+				<a id="Logo" href="http://www.libreoffice.org" target="_blank" title="LibreOffice International Website"></a>
+				<% if Banner %><% include Banner %><% end_if %>
 			    	<p id="HeaderTagLine">$SiteConfig.Tagline.RAW</p>
 <% end_cached %>
 <%-- include SOPA_bar --%>

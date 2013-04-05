@@ -108,17 +108,49 @@ ul, .typography ul {
 	line-height: 170%;
 	padding: 0 0 8px 18px;
 }
+.typography form ul li {
+	background: none !important;
+	float: none !important;
+	line-height: normal !important;
+	padding-left: 0;
+}
+
+#Layout[dir="rtl"] ul li input[type="radio"] {
+	float: right;
+}
+.typography form ul li input[type="radio"] + label {
+	padding-left: 2em;
+}
+#Layout[dir="rtl"] form ul li input[type="radio"] + label {
+	padding-right: 2em;
+}
+
+.typography form label {
+	margin: 0;
+}
+
+#Form_DonationProceed {
+	width: 330px;
+}
+#Form_DonationProceed .middleColumn,#Form_DonationProceed input.text {
+	width: auto;
+}
 #Layout[dir="rtl"] ul li {
 	padding-left: 0;
 	padding-right: 18px;
 	background-position: right 6px;
+}
+#Layout[dir="rtl"] div.Downloads ul li {
+	background-position: 0px -10px;
 }
 
 .typography ul ul {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
+ul.optionset {
+	margin: 0 !important;
+}
 .typography ul ul li {
 	background: url(../images/bullet-blue.png) no-repeat 0 6px;
 }

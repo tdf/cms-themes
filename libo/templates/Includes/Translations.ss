@@ -1,6 +1,6 @@
 <% if Translations %>
-<div id="translations">
- <p>Available translations of this page:</p>
+<div id="translations"<% if isRTL %> dir="ltr"<% end_if %>><%-- force to ltr on rtl-pages --%>
+ <p>Available translations of this page: <input id="langfilter" type="text" placeholder="filter by iso-code or name"/></p>
  <ul class="translations"><% control Translations %>
   <li class="$Locale.RFC1766"><a href="$Link" hreflang="$Locale.RFC1766" title="$Title">$Locale.Nice(true)</a></li>
  <% end_control %></ul>

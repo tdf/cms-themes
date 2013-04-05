@@ -49,9 +49,9 @@ body {
 #TopHeader.Conference #HeaderTagLine { padding-top: 45px; }
 #TopHeader.Conference #Logo {
 	width: 517px;
-	height: 105px;
+	height: 132px;
 	padding: 0;
-	background: url(../images/LibO_Conference_Logo_2011Paris_color.png) no-repeat -15px -11px;
+	background: url(../images/conference.png) no-repeat -15px -11px;
 }
 
 #BottomHeader {
@@ -288,8 +288,16 @@ a#toTop {
 	top: 5px;
 	right: 0px;
 }
-div#translations p, ul.translations, ul.translations li {
+div#translations {
+	margin-top: -1em;
+	margin-bottom: 1em;
+}
+div#translations input { display: none; }
+div#translations input { display: none; }
+div#translations p, ul.translations li {
 	display: inline-block;
+	padding-right: 0 !important; /* override rtl rule */
+	margin-bottom: 0;
 }
 div#translations > ul.translations> li:first-letter {
 	text-transform: uppercase;

@@ -1,7 +1,31 @@
-a#Bughuntbanner {
-	height: 78px;
-	width: 258px;
-	margin-top: 8px;
-	display: inline-block;
+p#HeaderTagLine {
+	display: none;
 }
-p#HeaderTagLine { max-width: 350px;}
+a#donationbanner {
+	display: block;
+	position: relative;
+	width: 410px;
+	height: 64px;
+	top: -74px;
+	left: 472px;
+	background-image: url(../images/donatometer.png);
+}
+div#donationbar {
+	position: relative;
+	height: 14px;
+	top: 26px;
+	left: 87px;
+	background-color: #18A303;
+	background-image: -webkit-linear-gradient(left,#18A303,white,#18A303);
+	background-image:    -moz-linear-gradient(left,#18A303,white,#18A303);
+	background-image:      -o-linear-gradient(left,#18A303,white,#18A303);
+	background-image:         linear-gradient(left,#18A303,white,#18A303);
+}
+div#donationmarker {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin-left: 67px;
+	top: 10px;
+	background-image: url(../images/marker.png);
+}
