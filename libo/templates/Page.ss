@@ -5,7 +5,7 @@
 	<head>
 		<% base_tag %>
 <% cached "Top", ID, Aggregate(Page).Max(LastEdited) %>
-		<title><% if MetaTitle %>$MetaTitle  &raquo; <% else %>$Title &raquo; <% end_if %>$SiteConfig.Title</title>
+		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
 		$MetaTags(false) $Subsite.GoogleSiteVerification
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
