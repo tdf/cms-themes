@@ -1,3 +1,4 @@
+<% cached %>
 	<h1>$RSSHeader</h1>
 	<ul id="Blog"><% control Feed %>
 		<li>
@@ -11,3 +12,4 @@
 	<ul>
 		<li><a href="$RSSLink">$RSSLink</a></li>
 	</ul>
+<% end_cached %>
