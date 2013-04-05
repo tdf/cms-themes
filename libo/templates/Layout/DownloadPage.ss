@@ -21,7 +21,7 @@
  <label class="right"><input type="checkbox" id="Details" /> <% _t('Downloadpage.DETAILLINK','Get details (md5sum,…)') %></label>
 </div>
 <% else %><%-- no builds available is only assumed for testing-page --%>
-<p class="yellowbox">There are no testing builds available at the moment</p>
+<p class="yellowbox"><% _t('Downloadpage.NOTESTBUILDS','There are no testing builds available at the moment') %></p>
 <% end_if %>
 <div id="filtered"><%-- output of the javascript goes here --%></div>
 <ul id="uldown">
@@ -29,7 +29,7 @@
   <ul><% control SourcesDB.GroupedBy(Version) %>
    <li><a href="#" class="action">$Version</a>
     <ul><% control Children %>
-     <li><a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice</li><% end_control %>
+     <li><a href="http://download.documentfoundation.org/$Fullpath" class="piwik_download">$Filename</a> $Size.Nice</li><% end_control %>
     </ul>
    </li><!-- Version --><% end_control %>
   </ul>
@@ -38,7 +38,7 @@
   <ul><% control SdkDB.GroupedBy(Version) %>
    <li><a href="#" class="action">$Version</a>
     <ul><% control Children %>
-     <li>$NicePlatform <a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice</li><% end_control %>
+     <li>$NicePlatform <a href="http://download.documentfoundation.org/$Fullpath" class="piwik_download">$Filename</a> $Size.Nice</li><% end_control %>
     </ul>
    </li><!-- Version --><% end_control %>
   </ul>
@@ -49,15 +49,15 @@
     <ul><% control Children.GroupedBy(Platform) %><% control Children.GroupedBy(Arch) %>
      <li><a href="#" class="action">$NicePlatform</a>
       <ul class="{$Platform}$Arch"><% control Children %>
-       <li class="install $Lang"><a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice</li><% if Last %><% if Langpacks %>
+       <li class="install $Lang"><a href="http://download.documentfoundation.org/$Fullpath" class="piwik_download">$Filename</a> $Size.Nice</li><% if Last %><% if Langpacks %>
        <li><a href="#" class="action">Languagepacks</a>
         <ul><% control Langpacks %>
-         <li class="lang $Lang"><a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice ($Lang - <% if NiceLang %>$NiceLang<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
+         <li class="lang $Lang"><a href="http://download.documentfoundation.org/$Fullpath" class="piwik_download">$Filename</a> $Size.Nice ($Lang - <% if NiceLang %>$NiceLang<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
         </ul>
        </li><!-- Langpacks --><% end_if %><% if Helppacks %>
        <li><a href="#" class="action">Helppacks</a>
         <ul><% control Helppacks %>
-         <li class="help $Lang"><a href="http://download.documentfoundation.org/$Fullpath">$Filename</a> $Size.Nice ($Lang - <% if NiceLang %>$NiceLang<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
+         <li class="help $Lang"><a href="http://download.documentfoundation.org/$Fullpath" class="piwik_download">$Filename</a> $Size.Nice ($Lang - <% if NiceLang %>$NiceLang<% else %>fixme - add nice lang<% end_if %>)</li><% end_control %>
         </ul>
        </li><!-- Helppacks --><% end_if %><% end_if %><% end_control %>
       </ul>
