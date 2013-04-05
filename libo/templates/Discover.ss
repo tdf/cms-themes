@@ -45,7 +45,8 @@
                 <li><a href="/" class="ascensorLink ascensorLink2">LibreOffice 4</a></li>
                 <li><a class="active">Discover it</a></li>
                 <li><a href="http://donate.libreoffice.org">Donate</a></li>
-                <li><a href="http://www.libreoffice.org/default">Main website</a></li>
+                <%-- FancyPage should have show in menus disabled, so first in Toplevel (& shown in menus) is regular homepage --%>
+                <li><a href="<% control Menu(1) %><% if First %>$Link<% end_if %><% end_control %>">Main website</a></li>
               </ul>
             </nav>
             <nav class="secondary_nav" role="navigation">
