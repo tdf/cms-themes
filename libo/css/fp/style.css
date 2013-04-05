@@ -378,9 +378,8 @@ footer.legal a, footer.legal a:active {
 	/*logo*/
 	.home h1 {
 		background: url("../../images/fp/logo_libre_office-1024.png") center bottom no-repeat;
-		height: 162px;
+		min-height: 162px;
 		margin-left: -275px;
-		min-height: auto;
 		padding-top: 0;
 		text-indent: -9999px;
 		width: 550px;
@@ -399,10 +398,6 @@ footer.legal a, footer.legal a:active {
 		right: auto;
 		left: 20px;
 		width: 38px;
-	}
-
-	.container {
-		padding-top: 30%;
 	}
 
 	/*Slides*/

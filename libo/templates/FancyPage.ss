@@ -1,7 +1,7 @@
-<% cached %>
 <% require javascript(mysite/javascript/fp/jquery-1.8.0.min.js) %>
 <% require javascript(mysite/javascript/fp/jquery.animate-enhanced.min.js) %>
 <% require javascript(mysite/javascript/fp/jquery.ascensor.js) %>
+<% require javascript(mysite/javascript/fp/jquery.easing.1.3.js) %>
 <% require javascript(mysite/javascript/fp/jquery.superslides.js) %>
 <% require javascript(mysite/javascript/fp/plugins.js) %>
 <% require javascript(mysite/javascript/fp/script.js) %>
@@ -9,6 +9,7 @@
 <% require css(themes/libo/css/fp/superslides.css) %>
 <% require css(themes/libo/css/fp/style.css) %>
 <% require css(themes/libo/css/fp/no-js.css) %>
+<% cached %>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
