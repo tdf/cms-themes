@@ -8,7 +8,7 @@
 <% include Translations %>
 <div class="typography">
 		<h1>$Title</h1>
-
+<% include DonateDownload %>
 		$Content
 		$Form
 		$PageComments
