@@ -9,7 +9,7 @@
 <% require css(themes/libo/css/fp/superslides.css) %>
 <% require css(themes/libo/css/fp/style.css) %>
 <% require css(themes/libo/css/fp/no-js.css) %>
-<% cached %>
+<% cached LastEdited, ContentLocale %>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -34,7 +34,7 @@
 </head>
 <body class="home">
 <noscript>
-	<div class="t_center"><p class="badge-warning ">Javascript is disabled in your web browser.</p></div>
+	<div class="t_center"><p class="badge-warning "><% _t('NOSCRIPT', 'Javascript is disabled in your web browser.') %></p></div>
 </noscript>
 <div id="ascensorBuilding">
   <section>
@@ -43,16 +43,16 @@
       <div id="btn_nav">MENU</div>
       <nav class="navigation" role="navigation">
         <ul>
-          <li><a href="#" class="active">LibreOffice 4</a></li>
-          <li><a href="{$Link}Discover" class="ascensorLink ascensorLink2">Discover it</a></li>
-          <li><a href="http://donate.libreoffice.org" title="Donate">Donate</a></li>
+          <li><a href="#" class="active"><% _t('FANCYLABEL', 'LibreOffice 4') %></a></li>
+          <li><a href="{$Link}Discover" class="ascensorLink ascensorLink2"><% _t('DISCOVER', 'Discover it') %></a></li>
+          <li><a href="http://donate.libreoffice.org/$DonationURLSegment" title="Donate"><% _t('DONATE', 'Donate') %></a></li>
           <%-- FancyPage should have show in menus disabled, so first in Toplevel (& shown in menus) is regular homepage --%>
-          <li><a href="<% control Menu(1) %><% if First %>$Link<% end_if %><% end_control %>">Main website</a></li>
+          <li><a href="<% control Menu(1) %><% if First %>$Link<% end_if %><% end_control %>"><% _t('MAINSITE', 'Main website') %></a></li>
         </ul>
       </nav>
 
        <div class="btn_dll">
-      <a href="http://www.libreoffice.org/download">Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!</a>
+      <a href="http://www.libreoffice.org/download"><% _t('DLBADGE', 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!') %></a>
       </div>
 
       <div id="slides">
@@ -62,8 +62,8 @@
              <div class="container">
               <div class="picture"></div>
               <div class="txt">
-                <h2>Free Office Suite</h2>
-                <p>LibreOffice 4: The free office suite the community has been dreaming of for twelve years.</p>
+                <h2><% _t('SUITE_H', 'Free Office Suite') %></h2>
+                <p><% _t('SUITE', 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.') %></p>
               </div>
             </div>
           </li>
@@ -72,9 +72,8 @@
             <div class="container slider2">
               <div class="picture"></div>
               <div class="txt">
-                  <h2>Fun project</h2>
-                  <p>LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.</p>
-                  <a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>
+                  <h2><% _t('FUN_H', 'Fun project') %></h2>
+                  <p><% _t('FUN', 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>') %></p>
               </div>
               <div class="clear"></div>
             </div>
@@ -83,9 +82,8 @@
             <img src="/themes/libo/images/fp/bg_slider_3.jpg" width="947" height="647" alt="Slider">
             <div class="container">
               <div class="txt">
-                <h2>Fantastic people</h2>
-                  <p>LibreOffice is about more than software. It's about people, it's about culture, it's about creation, sharing and collaboration.<br>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.</p>
-                  <a href="https://www.libreoffice.org/get-involved/">Join us today !</a>
+                <h2><% _t('PEOPLE_H', 'Fantastic people') %></h2>
+                  <p><% _t('PEOPLE', 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>') %></p>
               </div>
               <div class="picture"></div>
               <div class="clear"></div>
@@ -109,6 +107,18 @@
     </section>
 </div>
 
+<% if Subsite.PiwikID %><!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.documentfoundation.org/" : "http://piwik.documentfoundation.org/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", $Subsite.PiwikID);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://piwik.documentfoundation.org/piwik.php?idsite=$Subsite.PiwikID" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag --><% end_if %>
 </body>
 </html>
 <% end_cached %>

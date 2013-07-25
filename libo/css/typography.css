@@ -611,3 +611,6 @@ hr {
 	background: #EEE;
 	text-align: left;
 }
+table.features { border: 1px solid #dddddd; border-collapse:collapse; }
+th.features { border: 1px solid #dddddd; }
+td.features { border: 1px solid #dddddd; }
